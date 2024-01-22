@@ -1,149 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Welcome to AI Dynamica' 24</title>
-  <!--<link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Welcome to AI Dynamica' 24</title>
+    <link
       rel="icon"
       type="image/x-icon"
-      href="New folder\logo_ai-removebg-preview.png"
-    />!-->
-  <script>
-    var countDownDate = new Date("Feb 05, 2024 00:00:00").getTime();
-    var x = setInterval(function () {
+      href="New folder\Untitled_design_2_-removebg-preview.png"
+    />
+    <script>
+      var countDownDate = new Date("Feb 05, 2024 00:00:00").getTime();
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
 
-      // Get today's date and time
-      var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
 
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-      // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "Registration Closed";
+        }
+      }, 1000);
+    </script>
+  </head>
 
-      // If the count down is over, write some text 
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-      }
-    }, 1000);
-  </script>
-</head>
-
-<body>
-  <div class="header">
-    <marquee>Welcome to AI Dynamica's official website - A National Level Symposium
-      hosted by department of ADS on 5th of February 2024 - Register
-      Now!!</marquee>
-  </div>
-  <div class="video-container">
-    <div class="video">
-      <video src="New folder\Distressed Glitch Intro Preview 82334355 _ Renderforest(1)_1705598536535.mp4" autoplay
-        muted loop></video>
+  <body>
+    <div class="header">
+      <marquee
+        >Welcome to AI Dynamica's official website - A National Level Symposium
+        hosted by department of ADS on 5th of February 2024 - Register
+        Now!!</marquee
+      >
     </div>
-    <div class="flex">
-      <img src="New folder\rmk header1.png" alt="" />
-    </div>
-    <div class="title">
-      <div class="content">
-        <p>National Level Tech Symposium conducted by Department of ADS</p>
+    <div class="video-container">
+      <div class="video">
+        <video
+          src="New folder\Distressed Glitch Intro Preview 82334355 _ Renderforest(1)_1705598536535.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
       </div>
-      <div class="btn">
-        <a href="https://docs.google.com/forms/d/1l5slQwCpH-WT6nKd1zkNx-Bw5N5qetX3Jgzybq-QV2w/edit" target="_blank"
-          class="Register_btn">Register Now</a>
-        <a href="" class="Explore_btn">Explore Events</a>
+      <div class="flex">
+        <img src="New folder\rmk header1.png" alt="" />
       </div>
-    </div>
-  </div>
-
-
-  <div class="about">
-    <div class="container">
-      <div class="about_logo">
-        <img class='dynamica_logo' src="New folder\Untitled_design_2_-removebg-preview.png" alt="" />
-      </div>
-      <div class="about_content">
-        <div class="about_content_box">
-          <h3>ABOUT AI DYNAMICA 2K24</h3>
-          <p>
-            Get ready to unleash your potential at AI Dynamica 2K24, a National Level Technical Symposium hosted by the
-            esteemed Department of ADS at R.M.K. Engineering College.
-          </p>
-          <p>
-            Mark your calendars for August 5th, 2023, as this electrifying event promises to be a game-changer for your
-            engineering journey.
-          </p>
-
+      <div class="title">
+        <div class="content">
+          <p>National Level Tech Symposium conducted by Department of ADS</p>
+        </div>
+        <div class="btn">
+          <a
+            href="https://docs.google.com/forms/d/1l5slQwCpH-WT6nKd1zkNx-Bw5N5qetX3Jgzybq-QV2w/edit"
+            target="_blank"
+            class="Register_btn"
+            >Register Now</a
+          >
+          <a href="#events" class="Explore_btn">Explore Events</a>
         </div>
       </div>
     </div>
-    <div class="countDown">
-      <p>Registration closes in:</p>
-      <p id="demo"></p>
-    </div>
-  </div>
 
-  <div class="event-title">
-    <h1 style="background-color: black; padding-top: 40px;">
-      <center style="color: white;">Events in <span style="color: red;">AI DYNAMICA</span> </center>
+    <div class="about">
+      <div class="container">
+        <div class="about_logo">
+          <img
+            class="dynamica_logo"
+            src="New folder\Untitled_design_2_-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <div class="about_content">
+          <div class="about_content_box">
+            <h3>ABOUT AI DYNAMICA 2K24</h3>
+            <p>
+              Get ready to unleash your potential at AI Dynamica 2K24, a
+              National Level Technical Symposium hosted by the esteemed
+              Department of ADS at R.M.K. Engineering College.
+            </p>
+            <p>
+              Mark your calendars for August 5th, 2023, as this electrifying
+              event promises to be a game-changer for your engineering journey.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="countDown">
+        <p>Registration closes in:</p>
+        <p id="demo"></p>
+      </div>
+    </div>
+
+    <div class="event-title" id="events">
+      <h1 style="background-color: black; padding-top: 40px">
+        <center style="color: white">
+          Events in <span style="color: red">AI DYNAMICA</span>
+        </center>
+      </h1>
+    </div>
+    <div class="events_container" >
+      <div class="content-section">
+        <div class="event_card">
+          <img src="New folder\ai.png" alt="" />
+          <h3>AI Architects</h3>
+          <p>Craft, Compete, Conquer</p>
+          <a href="">More Information</a>
+        </div>
+        <div class="event_card">
+          <img src="New folder\findthebgm.png" alt="" />
+          <h3>Find The BGM</h3>
+          <p>Are you a movie buff??</p>
+          <a href="">More Information</a>
+        </div>
+        <div class="event_card">
+          <img src="New folder\allactingsir.png" alt="" />
+          <h3>All Acting Sir</h3>
+          <p>Ithu Acting Madam!!</p>
+          <a href="">More Information</a>
+        </div>
+        <div class="event_card">
+          <img src="New folder\ii.png" alt="" />
+          <h3>Idea Ignite</h3>
+          <p>Present, Pitch, Promote..</p>
+          <a href="">More Information</a>
+        </div>
+        <div class="event_card">
+          <img src="New folder\vtv.png" alt="" />
+          <h3>Vision To Visual</h3>
+          <p>Look, Burst Ballons, Answer</p>
+          <a href="">More Information</a>
+        </div>
+        <div class="event_card">
+          <img src="New folder\Epic Ideate.png" alt="" />
+          <h3>Epic Ideate</h3>
+          <p>C'mon, It's your deck!!</p>
+          <a href="">More Information</a>
+        </div>
+      </div>
+    </div>
+    <div class="empty_div"></div>
+    <div class="cash_prize">
+      <p>Cash Prize of 10,000</p>
+    </div>
+    <div class="empty_div"></div>
+    <h1
+      style="
+        background-color: red;
+        font-size: 8vmin;
+        color: white;
+        padding: 10px;
+      "
+    >
+      <center>Rules and Regulations</center>
     </h1>
-  </div>
-  <div class="events_container">
-    <div class="content-section">
-      <div class="event_card">
-        <img src="New folder\Untitled_design_2_-removebg-preview.png" alt="">
-        <h3>EVENT NAME</h3>
-        <p>Mark your calendars for August 5th, 2023, as this electrifying event promises to be a game-changer for your
-          engineering journey.</p>
+    <div class="rules_container">
+      <div class="rules-content-section">
+        <div class="rules_card">
+          <h1>01</h1>
+          <h3>MANDATORY</h3>
+          <p>
+            All participants must be aware of the fact that there is only online
+            registration and participants are requested to carry their college
+            id cards without fail.
+          </p>
+        </div>
+        <div class="rules_card">
+          <h1>02</h1>
+          <h3>TRANSPORT</h3>
+          <p>
+            Participants are hereby informed that casuals are strictly
+            prohibited inside our campus and are requested to wear formals and
+            shoes compulsorily.
+          </p>
+        </div>
+        <div class="rules_card">
+          <h1>03</h1>
+          <h3>DRESS CODE</h3>
+          <p>
+            All participants must be aware of the fact that there is only online
+            registration and participants are requested to carry their college
+            id cards without fail.
+          </p>
+        </div>
+        <div class="rules_card">
+          <h1>04</h1>
+          <h3>DISCIPLINE</h3>
+          <p>
+            All the participants should adhere to the rules and regulations of
+            the college and anyone violating the above rules will not be allowed
+            to participate in the event.
+          </p>
+        </div>
+        <div class="rules_card">
+          <h1>05</h1>
+          <h3>REPORTING TIME</h3>
+          <p>
+            All participants are requested to present at the college campus by
+            8:30 a.m.
+          </p>
+        </div>
+        <div class="rules_card">
+          <h1>06</h1>
+          <h3>PROHIBITED</h3>
+          <p>
+            Use of mobile phones inside the college premises is strictly
+            prohibited.
+          </p>
+        </div>
       </div>
-      <div class="event_card">
-        <img src="New folder\Untitled_design_2_-removebg-preview.png" alt="">
-        <h3>EVENT NAME</h3>
-        <p>Mark your calendars for August 5th, 2023, as this electrifying event promises to be a game-changer for your
-          engineering journey.</p>
-      </div>
-      <div class="event_card">
-        <img src="New folder\Untitled_design_2_-removebg-preview.png" alt="">
-        <h3>EVENT NAME</h3>
-        <p>Mark your calendars for August 5th, 2023, as this electrifying event promises to be a game-changer for your
-          engineering journey.</p>
-      </div>
-      <div class="event_card">
-        <img src="New folder\Untitled_design_2_-removebg-preview.png" alt="">
-        <h3>EVENT NAME</h3>
-        <p>Mark your calendars for August 5th, 2023, as this electrifying event promises to be a game-changer for your
-          engineering journey.</p>
-      </div>
-      <div class="event_card">
-        <img src="New folder\Untitled_design_2_-removebg-preview.png" alt="">
-        <h3>EVENT NAME</h3>
-        <p>Mark your calendars for August 5th, 2023, as this electrifying event promises to be a game-changer for your
-          engineering journey.</p>
-      </div>
-
-
     </div>
-  </div>
-  <div class="cash_prize">
-    <p>Cash Prize of 10,000 !!</p>
-  </div>
 
+    <div class="empty_div"></div>
+    <div class="college_info">
+      <div class="college_content">
+        <h1><center>Event Coordinators</center></h1>
+        <div class="empty_div" style="background-color: #252525"></div>
+        <div class="college_container">
+          <h1>Find the BGM:</h1>
+          <h3>
+            Saravanan S, Guduguntala Venkataviswa Karthikeyan, Talapaneni
+            Prabhas, Keshavardhan, Ashraf Deen
+          </h3>
+        </div>
+        <div class="college_container">
+          <h1>Idea ignite</h1>
+          <h3>
+            Devadharshini K, Pooja Sri L, Magham Sravya, Inamanamelluri V Naga
+            Mahathi, Narmada, Nivedha
+          </h3>
+        </div>
+        <div class="college_container">
+          <h1>All Acting sir</h1>
+          <h3>Swetha R, Tamizh malar S G, Shrinithi N, Pavithra K,</h3>
+        </div>
+        <div class="college_container">
+          <h1>AI Architects</h1>
+          <h3>
+            Jamaludeen F, Karthik K, Anbarasu K, Kayam Girish, Kaviyarasu, Rohit
+          </h3>
+        </div>
+        <div class="college_container">
+          <h1>Vision to visual</h1>
+          <h3>
+            Murarisetty Mahathi Devi, Thrisha R, Rithanya G, Pavithra, Bumika
+          </h3>
+        </div>
+        <div class="college_container">
+          <h1>Epic Ideate</h1>
+          <h3>Prathiksha K, Deepika V, Dayana M, Swasthika, Srijha</h3>
+        </div>
+      </div>
+    </div>
 
+    <div class="empty_div"></div>
 
-
-
-
-  <!--<footer>R.M.K. Engineering College | ADS Department | All Rights Reserved! | Designed & Developed By <a href="https://www.linkedin.com/in/prakash-jayagopal-328491205/" target="_blank">Prakash</a>.</footer>!-->
-</body>
-
+    <footer>
+      R.M.K. Engineering College | ADS Department | All Rights Reserved |
+      Designed & Developed By
+      <a
+        href="https://www.linkedin.com/in/prakash-jayagopal-328491205/"
+        target="_blank"
+        >Prakash</a
+      >.
+    </footer>
+  </body>
 </html>
