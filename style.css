@@ -20,7 +20,7 @@ marquee {
 .video-container {
   position: relative;
 }
-video {
+video{
   background-color: aqua;
   z-index: 1;
   width: 100%;
@@ -28,6 +28,7 @@ video {
   object-fit: cover;
   position: relative;
 }
+
 .flex {
   z-index: 2;
   position: absolute;
