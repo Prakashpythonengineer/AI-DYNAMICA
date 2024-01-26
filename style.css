@@ -383,3 +383,42 @@ footer a {
     padding: 50px;
   }
 }
+.james_bond{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-color: #0e0d0d;
+  flex-direction: row;
+}
+.james_bond_img{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.james_bond_wishes{
+  display: inline-block;
+  justify-items: center;
+  align-self: center;
+  text-align: center;
+}
+.james_bond_wishes h1{
+  padding: 20px;
+  text-align: center;
+  font-size: 6vmin;
+}
+@media screen and (max-width: 600px) {
+  .james_bond{
+    flex-direction: column;
+  }
+}
+.james_bond_wishes a{
+  background-color: red;
+  color: white;
+  padding: 13px 25px;
+  margin: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
