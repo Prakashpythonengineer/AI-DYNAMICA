@@ -169,14 +169,13 @@ footer {
   background-color: red;
   color: #fff;
   letter-spacing: 0.7px;
-  font-size: 3vmin;
+  font-size: 2.3vmin;
 
 }
 footer a {
   font-weight: bold;
   color: #00ffc8;
   text-decoration: none;
-  font-size: 3vmin;
   align-items: center;
 }
 .events_container {
